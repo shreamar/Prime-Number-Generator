@@ -99,10 +99,10 @@ namespace PrimeNumberGenerator
                     //writes the file counter in data file
                     File.WriteAllText(pathData, fileCounter.ToString());
 
-                    counter++;
-
                     //creates new file every million entries
                     fileCounter = (int)(counter / 1000000);
+
+                    counter++;                    
                 }
                 number++;
             }
