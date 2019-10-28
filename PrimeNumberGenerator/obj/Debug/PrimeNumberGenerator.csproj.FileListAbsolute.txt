@@ -13,3 +13,17 @@ G:\Idaho State University\6th Semester (Spring 2018)\CS 1182\PrimeNumberGenerato
 G:\Idaho State University\6th Semester (Spring 2018)\CS 1182\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator.csproj.CoreCompileInputs.cache
 G:\Idaho State University\6th Semester (Spring 2018)\CS 1182\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator.exe
 G:\Idaho State University\6th Semester (Spring 2018)\CS 1182\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator.pdb
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\bin\Debug\PrimeNumberGenerator.exe.config
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\bin\Debug\PrimeNumberGenerator.exe
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\bin\Debug\PrimeNumberGenerator.pdb
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator.csprojAssemblyReference.cache
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\MainWindow.g.cs
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\App.g.cs
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator_MarkupCompile.cache
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator_MarkupCompile.lref
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\MainWindow.baml
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator.g.resources
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator.Properties.Resources.resources
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator.csproj.GenerateResource.cache
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator.exe
+H:\Experimental C# projects\PrimeNumberGenerator\PrimeNumberGenerator\obj\Debug\PrimeNumberGenerator.pdb

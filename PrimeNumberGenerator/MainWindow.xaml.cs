@@ -33,14 +33,14 @@ namespace PrimeNumberGenerator
 
             string lastDigit = number.ToString().Substring(number.ToString().Length - 1, 1);
 
-            if(lastDigit=="2" ||lastDigit=="4" || lastDigit=="6" || lastDigit=="8" || (lastDigit=="5" && number!=5) || lastDigit=="0")
+            if ((lastDigit == "2" && number != 2) || lastDigit == "4" || lastDigit == "6" || lastDigit == "8" || (lastDigit == "5" && number != 5) || lastDigit == "0")
             {
                 isComposite = true;
             }
 
             for (ulong i = 2; i <= (Math.Sqrt(number)); i++)
             {
-                if (number % i == 0  || isComposite==true)
+                if (number % i == 0 || isComposite == true)
                 {
                     isComposite = true;
                     break;
@@ -51,10 +51,42 @@ namespace PrimeNumberGenerator
 
         private void WriteToFile()
         {
-            //txtDisplay.Text = "Process started\r\n";
-            string[] readLine = File.ReadAllLines("primeNumbers.txt");
-            ulong number = readLine.Length!=0?ulong.Parse(readLine[readLine.Length-1].Split()[0])+1:2;
-            ulong counter = readLine.Length != 0 ? ulong.Parse(readLine[readLine.Length - 1].Split()[1])+1 : 1;
+            //directory path in Documents folder named PrimeNumbers
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\PrimeNumbers";
+
+            //Create directory
+            Directory.CreateDirectory(path);
+
+            //path for data file that keeps track of number of files created
+            string pathData = path + @"\data";
+
+            //initial file counter set to 0
+            int fileCounter = 0;
+
+            //checks for existence of data file
+            if (!File.Exists(pathData))
+            {
+                File.Create(pathData).Close();
+            }
+            else
+            {
+                //reads file counter from data file
+                fileCounter = int.Parse(File.ReadAllText(pathData));
+            }
+
+            //set file name based on file counter
+            string pathFile = path + @"\primenumbers" + fileCounter + ".csv";
+
+            //Checks existence of the file
+            if (!File.Exists(pathFile))
+            {
+                File.Create(pathFile).Close();
+            }
+            
+            //reads the data from latest file so that the process can continue from the latest result
+            string[] readLine = File.ReadAllLines(pathFile);
+            ulong number = readLine.Length != 0 ? ulong.Parse(readLine[readLine.Length - 1].Split(',')[1]) + 1 : 2;
+            ulong counter = readLine.Length != 0 ? ulong.Parse(readLine[readLine.Length - 1].Split(',')[0]) + 1 : 1;
             double ratio = 0;
 
             while (true)
@@ -62,12 +94,19 @@ namespace PrimeNumberGenerator
                 if (isPrime(number))
                 {
                     ratio = (double)number / (double)counter;
-                    File.AppendAllText("primeNumbers.txt",number+" "+counter+" "+DateTime.Now+" "+ratio.ToString("n20")+"\r\n");
-                    //txtDisplay.Text+= number + " " + counter + " " + DateTime.Now + "\r\n";
+                    File.AppendAllText(path + @"\primenumbers" + fileCounter + ".csv", counter + "," + number + "," + DateTime.Now + "," + ratio.ToString("n20") + "\r\n");
+
+                    //writes the file counter in data file
+                    File.WriteAllText(pathData, fileCounter.ToString());
+
                     counter++;
+
+                    //creates new file every million entries
+                    fileCounter = (int)(counter / 1000000);
                 }
                 number++;
             }
         }
+
     }
 }
