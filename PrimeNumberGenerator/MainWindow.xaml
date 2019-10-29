@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrimeNumberGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="347.927" Width="413.658">
+        Title="MainWindow" Height="579.927" Width="413.658">
     <Grid>
-        <TextBlock x:Name="txtDisplay" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="298" Width="387"/>
-
+        <ScrollViewer>
+            <TextBox ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="txtDisplay" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="530" Width="387" />
+        </ScrollViewer>
     </Grid>
 </Window>
